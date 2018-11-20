@@ -126,6 +126,8 @@
   <ItemGroup>
     <ClCompile Include="Alfa-Back-Form.cpp" />
     <ClCompile Include="Alfa-Back-GUI.cpp" />
+    <ClCompile Include="Daten.cpp" />
+    <ClCompile Include="Einheit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -138,6 +140,8 @@
     <ClInclude Include="Alfa-Back-Form.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Daten.h" />
+    <ClInclude Include="Einheit.h" />
     <ClInclude Include="Rezept.h" />
   </ItemGroup>
   <ItemGroup>

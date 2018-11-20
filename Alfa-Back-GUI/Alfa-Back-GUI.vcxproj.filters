@@ -21,12 +21,24 @@
     <ClCompile Include="Alfa-Back-Form.cpp">
       <Filter>Headerdateien</Filter>
     </ClCompile>
+    <ClCompile Include="Einheit.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Daten.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alfa-Back-Form.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Rezept.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Daten.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Einheit.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

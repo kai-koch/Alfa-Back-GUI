@@ -81,45 +81,44 @@
         "Mehl": 1700,
         "Milch": 5,
         "Pflanzenfett": 400,
-        "Zucker": 700,
+        "Rum":  0.2,
         "Vanillezucker": 300,
-        "Rum":  0.2
+        "Zucker": 700
       },
       "Verzierung": {
+        "Haselnuesse": 300,
         "Kakaoguss": 0.3,
-        "Marmelade": 3,
         "Mandeln": 300,
-        "Walnüsse": 300,
-        "Haselnüsse": 300
+        "Marmelade": 3,
+        "Walnüsse": 300
       }
     }
   ],
   "Einheiten": {
-    "Temperatur": "°C",
-    "Backzeit": "min",
     "Backpulver": "g",
+    "Backzeit": "min",
     "Eier": "l",
     "GroesseX": "mm",
     "GroesseY": "mm",
-    "Haselnüsse": "g",
+    "Haselnuesse": "g",
     "Kakao": "g",
     "Kakaoguss": "l",
+    "Mandeln": "g",
     "Marmelade": "l",
     "Mehl": "g",
     "Milch": "l",
-    "Mandeln": "g",
     "Pflanzenfett": "g",
+    "Puderzucker": "g",
     "Rum": "l",
     "Schokostreusel": "g",
+    "Temperatur": "°C",
     "Vanillezucker": "g",
-    "Walnüsse": "g",
+    "Walnuesse": "g",
     "Zimt": "g",
     "Zitronenguss": "l",
     "Zitronenpulver": "g",
     "Zitronenzimtguss": "l",
     "Zucker": "g",
-
     "Zuckerstreusel(bunt)": "g",
-    "Puderzucker": "g"
   }
 }
