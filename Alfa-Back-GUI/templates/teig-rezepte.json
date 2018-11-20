@@ -1,0 +1,62 @@
+{
+  "Teigrezepte": [
+    {
+      "Teigname": "Schokokeks",
+      "Anzahl": 100,
+      "Form": "Kreis",
+      "GroesseX": 60,
+      "GroesseY": 60,
+      "Zutaten": {
+        "Backpulver": 100,
+        "Eier": 0.9,
+        "Kakao": 700,
+        "Mehl": 900,
+        "Milch": 4,
+        "Pflanzenfett": 500,
+        "Zucker": 1000
+      },
+      "Verzierung": {
+        "Kakaoguss": 0.3,
+        "Schokostreusel": 300
+      }
+    },
+    {
+      "Teigname": "Zitronensterne",
+      "Anzahl": 100,
+      "Form": "Stern",
+      "GroesseX": 50,
+      "GroesseY": 50,
+      "Zutaten": {
+        "Backpulver": 100,
+        "Eier": 1.1,
+        "Mehl": 1200,
+        "Milch": 5,
+        "Pflanzenfett": 800,
+        "Zitronenpulver": 200,
+        "Zucker": 1100
+      },
+      "Verzierung": {
+        "Zuckerstreusel(bunt)": 300,
+        "Zitronenguss": 0.3
+      }
+    }
+  ],
+  "Einheiten": {
+    "Backpulver": "g",
+    "Eier": "l",
+    "GroesseX": "mm",
+    "GroesseY": "mm",
+    "Kakao": "g",
+    "Kakaoguss": "l",
+    "Mehl": "g",
+    "Milch": "l",
+    "Pflanzenfett": "g",
+    "Schokostreusel": "g",
+    "Zimt": "g",
+    "Zitronenguss": "l",
+    "Zitronenpulver": "g",
+    "Zitronenzimtguss": "l",
+    "Zucker": "g",
+    "Zuckerstreusel(bunt)": "g"
+  }
+}
