@@ -6,6 +6,8 @@
       "Form": "Kreis",
       "GroesseX": 60,
       "GroesseY": 60,
+	  "Temperatur" : 200,
+	  "Backzeit": 30,
       "Zutaten": {
         "Backpulver": 100,
         "Eier": 0.9,
@@ -26,6 +28,8 @@
       "Form": "Stern",
       "GroesseX": 50,
       "GroesseY": 50,
+	  "Temperatur" : 180,
+	  "Backzeit": 40,
       "Zutaten": {
         "Backpulver": 100,
         "Eier": 1.1,
@@ -42,6 +46,8 @@
     }
   ],
   "Einheiten": {
+	"Temperatur" : "°C",
+	"Backzeit" : "min",
     "Backpulver": "g",
     "Eier": "l",
     "GroesseX": "mm",
@@ -57,6 +63,7 @@
     "Zitronenpulver": "g",
     "Zitronenzimtguss": "l",
     "Zucker": "g",
-    "Zuckerstreusel(bunt)": "g"
+    "Zuckerstreusel(bunt)": "g",
+	"Puderzucker" : "g"
   }
 }
