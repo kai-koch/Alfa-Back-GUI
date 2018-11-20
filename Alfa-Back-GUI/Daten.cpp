@@ -1,10 +1,11 @@
 #include "Daten.h"
 
 Daten::Daten() {
-    this->addZutatenEinheiten("Backpulver", "g");
-    this->addZutatenEinheiten("Backzeit", "min");
 /*        
-        "Eier" : "l",
+this->addZutatenEinheiten("Backpulver", "g");
+this->addZutatenEinheiten("Backzeit", "min");
+
+"Eier" : "l",
         "GroesseX" : "mm",
         "GroesseY" : "mm",
         "Haselnuesse" : "g",
@@ -36,13 +37,3 @@ Daten::Daten(const Daten %)
     throw gcnew System::InvalidOperationException("Daten cannot be copy-constructed");
 }
 
-ArrayList ^ Daten::getZutatenEinheiten()
-{
-    return einheiten;
-}
-
-Void Daten::addZutatenEinheiten(String^ nm, String^ unit)
-{
-    einheiten->Add(gcnew Einheit(nm, unit));
-    return Void();
-}

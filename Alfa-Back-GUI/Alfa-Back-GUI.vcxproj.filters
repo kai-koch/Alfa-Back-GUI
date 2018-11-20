@@ -21,10 +21,10 @@
     <ClCompile Include="Alfa-Back-Form.cpp">
       <Filter>Headerdateien</Filter>
     </ClCompile>
-    <ClCompile Include="Einheit.cpp">
+    <ClCompile Include="Daten.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Daten.cpp">
+    <ClCompile Include="Zutat.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,7 +38,7 @@
     <ClInclude Include="Daten.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Einheit.h">
+    <ClInclude Include="Zutat.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
