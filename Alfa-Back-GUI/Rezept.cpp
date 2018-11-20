@@ -23,6 +23,13 @@ Void Rezept::addVerzierung(Zutat ^ ingredient)
     return Void();
 }
 
+String ^ Rezept::getKonfigdatei(Int32 ^ totalAnzahlKekse)
+{
+    double rezeptfactor = *totalAnzahlKekse / *basisAnzahl;
+
+    return "";
+}
+
 String ^ Rezept::getTeigname()
 {
     return teigname;

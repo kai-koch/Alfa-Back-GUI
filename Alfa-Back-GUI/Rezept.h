@@ -79,7 +79,7 @@ public:
      * und gibt den String fuer die Konfigurationsdatei zurueck
      * @param totalAnzahlKekse Anzahl der Kekse, die gebacken werden sollen
      */
-    String getKonfigdatei(Int32 ^ totalAnzahlKekse);
+    String ^ getKonfigdatei(Int32 ^ totalAnzahlKekse);
 
     /**
      * Gibt das Grundrezept fuer Richtextbox als String zurueck
