@@ -81,9 +81,37 @@
         "Mehl": 1700,
         "Milch": 5,
         "Pflanzenfett": 400,
-        "Rum":  0.2,
+        "Rum": 0.2,
         "Vanillezucker": 300,
         "Zucker": 700
+      },
+      "Verzierung": {
+        "Haselnuesse": 300,
+        "Kakaoguss": 0.3,
+        "Mandeln": 300,
+        "Marmelade": 3,
+        "Walnüsse": 300
+      }
+    },
+    {
+      "Teigname": "Zimtkeks",
+      "Anzahl": 600,
+      "Form": "stern",
+      "GroesseX": 70,
+      "GroesseY": 70,
+      "Temperatur": 225,
+      "Backzeit": 40,
+      "Zutaten": {
+        "Backpulver": 700,
+        "Eier": 1.5,
+        "Kakao": 2000,
+        "Mehl": 1700,
+        "Milch": 5,
+        "Pflanzenfett": 400,
+        "Rum": 0.2,
+        "Vanillezucker": 300,
+        "Zucker": 700,
+          "Zimt":  100
       },
       "Verzierung": {
         "Haselnuesse": 300,
@@ -119,6 +147,6 @@
     "Zitronenpulver": "g",
     "Zitronenzimtguss": "l",
     "Zucker": "g",
-    "Zuckerstreusel(bunt)": "g",
+    "Zuckerstreusel(bunt)": "g"
   }
 }
