@@ -26,5 +26,13 @@
     <ClInclude Include="Alfa-Back-Form.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Rezept.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Alfa-Back-Form.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
