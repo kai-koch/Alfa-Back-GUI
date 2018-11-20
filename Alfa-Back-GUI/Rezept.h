@@ -1,4 +1,5 @@
 #pragma once
+#include "Zutat.h"
 
 using namespace System;
 using namespace System::Collections::Generic;
@@ -63,7 +64,7 @@ public:
      * @param name Name der Zutat
      * @param einheiten Anzahl der Einheiten, die fuer Rezept benoetigt werden
      */
-    Void addZutat(String name, Double einheiten);
+    Void addZutat(Zutat^ ingredient);
 
     /**
     * Fuegt eine Verzierungszutat mit Mengenangabe zur Verzierungszutatenliste
@@ -71,7 +72,7 @@ public:
     * @param name Name der Zutat
     * @param einheiten Anzahl der Einheiten, die fuer Rezept benoetigt werden
     */
-    Void addVerzierung(String name, Double einheiten);
+    Void addVerzierung(Zutat^ ingredient);
 
     /**
      * Berechnet die Zutatenmenge fuer die Menge an gewuenschten Keksen
