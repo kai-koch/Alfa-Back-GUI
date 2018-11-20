@@ -6,8 +6,8 @@
       "Form": "Kreis",
       "GroesseX": 60,
       "GroesseY": 60,
-	  "Temperatur" : 200,
-	  "Backzeit": 30,
+      "Temperatur": 200,
+      "Backzeit": 30,
       "Zutaten": {
         "Backpulver": 100,
         "Eier": 0.9,
@@ -28,8 +28,8 @@
       "Form": "Stern",
       "GroesseX": 50,
       "GroesseY": 50,
-	  "Temperatur" : 180,
-	  "Backzeit": 40,
+      "Temperatur": 180,
+      "Backzeit": 40,
       "Zutaten": {
         "Backpulver": 100,
         "Eier": 1.1,
@@ -43,27 +43,83 @@
         "Zuckerstreusel(bunt)": 300,
         "Zitronenguss": 0.3
       }
+    },
+    {
+      "Teigname": "Bauernkeks",
+      "Anzahl": 100,
+      "Form": "Fuenfeck",
+      "GroesseX": 70,
+      "GroesseY": 70,
+      "Temperatur": 220,
+      "Backzeit": 35,
+      "Zutaten": {
+        "Backpulver": 100,
+        "Eier": 1.5,
+        "Kakao": 2000,
+        "Mehl": 1700,
+        "Milch": 5,
+        "Pflanzenfett": 400,
+        "Zucker": 700
+      },
+      "Verzierung": {
+        "Kakaoguss": 0.3,
+        "Zimt": 300
+      }
+    },
+    {
+      "Teigname": "Nusseckkeks",
+      "Anzahl": 200,
+      "Form": "Dreieck",
+      "GroesseX": 70,
+      "GroesseY": 70,
+      "Temperatur": 225,
+      "Backzeit": 40,
+      "Zutaten": {
+        "Backpulver": 700,
+        "Eier": 1.5,
+        "Kakao": 2000,
+        "Mehl": 1700,
+        "Milch": 5,
+        "Pflanzenfett": 400,
+        "Zucker": 700,
+        "Vanillezucker": 300,
+        "Rum":  0.2
+      },
+      "Verzierung": {
+        "Kakaoguss": 0.3,
+        "Marmelade": 3,
+        "Mandeln": 300,
+        "Walnüsse": 300,
+        "Haselnüsse": 300
+      }
     }
   ],
   "Einheiten": {
-	"Temperatur" : "°C",
-	"Backzeit" : "min",
+    "Temperatur": "°C",
+    "Backzeit": "min",
     "Backpulver": "g",
     "Eier": "l",
     "GroesseX": "mm",
     "GroesseY": "mm",
+    "Haselnüsse": "g",
     "Kakao": "g",
     "Kakaoguss": "l",
+    "Marmelade": "l",
     "Mehl": "g",
     "Milch": "l",
+    "Mandeln": "g",
     "Pflanzenfett": "g",
+    "Rum": "l",
     "Schokostreusel": "g",
+    "Vanillezucker": "g",
+    "Walnüsse": "g",
     "Zimt": "g",
     "Zitronenguss": "l",
     "Zitronenpulver": "g",
     "Zitronenzimtguss": "l",
     "Zucker": "g",
+
     "Zuckerstreusel(bunt)": "g",
-	"Puderzucker" : "g"
+    "Puderzucker": "g"
   }
 }
