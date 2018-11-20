@@ -21,3 +21,9 @@ String ^ Zutat::getMasseinheit()
 {
     return Masseinheit;
 }
+
+Void Zutat::setMenge(Double^ mng)
+{
+    Menge = mng;
+    return Void();
+}

@@ -12,39 +12,39 @@ ref class Rezept
 {
 private:
     /**
-     * Key: Zutatenname, Value: Anzahl Einheiten benoetigt fuer Basisanzahl
+     * Key: Zutatenname, Value: Instanz der Klasse Zutat fuer Basisanzahl
      * von Keksen
      */
-    Dictionary<String^, Double>^ zutaten = gcnew Dictionary<String^, Double>();
+    Dictionary<String^, Zutat^>^ zutaten = gcnew Dictionary<String^, Zutat^>();
 
     /**
      * Key: Verzierungszutatenname, Value: Anzahl Einheiten benoetigt fuer
      * Basisanzahl
      * von Keksen
      */
-    Dictionary<String^, Double>^ verzierungen = gcnew Dictionary<String^, Double>();
-
-public:
+    Dictionary<String^, Zutat^>^ verzierungen = gcnew Dictionary<String^, Zutat^>();
     /** Name fuer Teig */
-    property String teigname;
+    String ^ teigname;
 
     /** Basis Anzahl Kekse Grundrezept */
-    property Double basisAnzahl;
+    Double ^ basisAnzahl;
 
     /** Form der Kekse: "Kreis", "Stern", "Oval", "Tanne", etc. */
-    property String form;
+    String ^ form;
 
     /** Kantenlaenge x fuer Rechteck in das die Form eingepasst wird */
-    property Double groesseX;
+    Double ^ groesseX;
 
     /** Kantenlaenge y fuer Rechteck in das die Form eingepasst wird */
-    property Double groesseY;
+    Double ^ groesseY;
 
-    /** Temperatur zum Backen der Kekse */
-    property Double backTemperatur;
+    /** Temperatur zum Backen der Kekse in °C */
+    Double ^ backTemperatur;
 
-    /** Zeit die das Rezept benötigt */
-    property Double backzeit;
+    /** Zeit, die das Rezept benoetigt, in Minuten */
+    Double ^ backZeit;
+
+public:
 
     /**
      * Properties der Klasse setzen
@@ -57,7 +57,7 @@ public:
      * @param bTemp Backtemperatur
      * @param bz Backzeit
      */
-    Rezept(String tn, Double bAnz, String fo, Double gX, Double gY, Double bTemp, Double bz);
+    Rezept(String ^ tn, Double ^ bAnz, String ^ fo, Double ^ gX, Double ^ gY, Double ^ bTemp, Double ^ bz);
 
     /**
      * Fuegt eine Zutat mit Mengenangabe zur Zutatenliste hinzu
@@ -79,12 +79,35 @@ public:
      * und gibt den String fuer die Konfigurationsdatei zurueck
      * @param totalAnzahlKekse Anzahl der Kekse, die gebacken werden sollen
      */
-    String getKonfigdatei(Int32 totalAnzahlKekse);
+    String getKonfigdatei(Int32 ^ totalAnzahlKekse);
 
     /**
      * Gibt das Grundrezept fuer Richtextbox als String zurueck
      */
     String getBeschreibung();
+
+
+    /*
+     * Getter
+     */
+    String ^ getTeigname();
+    Double ^ getBasisAnzahl();
+    String ^ getForm();
+    Double ^ getGroesseX();
+    Double ^ getGroesseY();
+    Double ^ getBackTemperatur();
+    Double ^ getBackZeit();
+
+    /*
+     * Setter
+     */
+    Void setTeigname(String ^ tn);
+    Void setBasisAnzahl(Double ^ ba);
+    Void setForm(String ^ f);
+    Void setGroesseX(Double ^ gX);
+    Void setGroesseY(Double ^ gY);
+    Void setBackTemperatur(Double ^ bT);
+    Void setBackZeit(Double ^ bZ);
 
     /**
      * @destructor

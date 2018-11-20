@@ -127,6 +127,7 @@
     <ClCompile Include="Alfa-Back-Form.cpp" />
     <ClCompile Include="Alfa-Back-GUI.cpp" />
     <ClCompile Include="Daten.cpp" />
+    <ClCompile Include="Rezept.cpp" />
     <ClCompile Include="Zutat.cpp" />
   </ItemGroup>
   <ItemGroup>
