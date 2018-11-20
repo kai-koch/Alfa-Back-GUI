@@ -11,7 +11,7 @@ private:
 public:
     Zutat(String^ nm, Double^ mng, String^ unit);
     String^ getName();
-    Double^ getMeng();
+    Double^ getMenge();
     String^ getMasseinheit();
 };
 

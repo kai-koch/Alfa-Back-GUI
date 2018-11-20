@@ -12,7 +12,7 @@ String ^ Zutat::getName()
     return Name;
 }
 
-Double ^ Zutat::getMeng()
+Double ^ Zutat::getMenge()
 {
     return Menge;
 }
