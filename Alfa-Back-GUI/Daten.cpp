@@ -1,7 +1,6 @@
 #include "Daten.h"
 
-Daten::Daten() {
-}
+Daten::Daten() {}
 
 Daten::Daten(const Daten %)
 {
