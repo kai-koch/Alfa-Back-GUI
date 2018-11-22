@@ -1,23 +1,23 @@
 #include "Zutat.h"
 
-Zutat::Zutat(String ^ nm, Double ^ mng, String ^ unit)
+Zutat::Zutat(String^ nm, Double^ mng, String^ unit)
 {
     Name = nm;
     Menge = mng;
     Masseinheit = unit;
 }
 
-String ^ Zutat::getName()
+String^ Zutat::getName()
 {
     return Name;
 }
 
-Double ^ Zutat::getMenge()
+Double^ Zutat::getMenge()
 {
     return Menge;
 }
 
-String ^ Zutat::getMasseinheit()
+String^ Zutat::getMasseinheit()
 {
     return Masseinheit;
 }

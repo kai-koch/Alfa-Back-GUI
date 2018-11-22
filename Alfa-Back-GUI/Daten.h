@@ -11,8 +11,3 @@ private:
 public:
     static property Daten^ InstanceOf { Daten^ get() { return %instance; } }
 };
-
-
-
-
-

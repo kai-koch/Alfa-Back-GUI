@@ -1,6 +1,6 @@
 #include "Rezept.h"
 
-Rezept::Rezept(String ^ tn, Double ^ bAnz, String ^ fo, Double ^ gX, Double ^ gY, Double ^ bTemp, Double ^ bz)
+Rezept::Rezept(String^ tn, Double^ bAnz, String^ fo, Double^ gX, Double^ gY, Double^ bTemp, Double^ bz)
 {
     teigname = tn;
     basisAnzahl = bAnz;
@@ -11,46 +11,46 @@ Rezept::Rezept(String ^ tn, Double ^ bAnz, String ^ fo, Double ^ gX, Double ^ gY
     backZeit = bz;
 }
 
-Void Rezept::addZutat(Zutat ^ ingredient)
+Void Rezept::addZutat(Zutat^ ingredient)
 {
     zutaten->Add(ingredient->getName(), ingredient);
     return Void();
 }
 
-Void Rezept::addVerzierung(Zutat ^ ingredient)
+Void Rezept::addVerzierung(Zutat^ ingredient)
 {
     verzierungen->Add(ingredient->getName(), ingredient);
     return Void();
 }
 
-String ^ Rezept::getKonfigdatei(Int32 ^ totalAnzahlKekse)
+String^ Rezept::getKonfigdatei(Int32^ totalAnzahlKekse)
 {
     double rezeptfactor = *totalAnzahlKekse / *basisAnzahl;
 
     return "";
 }
 
-String ^ Rezept::getTeigname()
+String^ Rezept::getTeigname()
 {
     return teigname;
 }
 
-Double ^ Rezept::getBasisAnzahl()
+Double^ Rezept::getBasisAnzahl()
 {
     return basisAnzahl;
 }
 
-String ^ Rezept::getForm()
+String^ Rezept::getForm()
 {
     return form;
 }
 
-Double ^ Rezept::getGroesseX()
+Double^ Rezept::getGroesseX()
 {
     return groesseX;
 }
 
-Double ^ Rezept::getGroesseY()
+Double^ Rezept::getGroesseY()
 {
     return groesseY;
 }
@@ -65,43 +65,43 @@ Double ^ Rezept::getBackZeit()
     return backZeit;
 }
 
-Void Rezept::setTeigname(String ^ tn)
+Void Rezept::setTeigname(String^ tn)
 {
     teigname = tn;
     return Void();
 }
 
-Void Rezept::setBasisAnzahl(Double ^ ba)
+Void Rezept::setBasisAnzahl(Double^ ba)
 {
     basisAnzahl = ba;
     return Void();
 }
 
-Void Rezept::setForm(String ^ f)
+Void Rezept::setForm(String^ f)
 {
     form = f;
     return Void();
 }
 
-Void Rezept::setGroesseX(Double ^ gX)
+Void Rezept::setGroesseX(Double^ gX)
 {
     groesseX = gX;
     return Void();
 }
 
-Void Rezept::setGroesseY(Double ^ gY)
+Void Rezept::setGroesseY(Double^ gY)
 {
     groesseY = gY;
     return Void();
 }
 
-Void Rezept::setBackTemperatur(Double ^ bT)
+Void Rezept::setBackTemperatur(Double^ bT)
 {
     backTemperatur = bT;
     return Void();
 }
 
-Void Rezept::setBackZeit(Double ^ bZ)
+Void Rezept::setBackZeit(Double^ bZ)
 {
     backZeit = bZ;
     return Void();

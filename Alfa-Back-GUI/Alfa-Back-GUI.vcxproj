@@ -142,6 +142,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Daten.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Rezept.h" />
     <ClInclude Include="Zutat.h" />
   </ItemGroup>
@@ -149,6 +150,9 @@
     <EmbeddedResource Include="Alfa-Back-Form.resx">
       <DependentUpon>Alfa-Back-Form.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Alfa-Back-GUI.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
