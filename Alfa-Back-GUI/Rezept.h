@@ -81,12 +81,6 @@ public:
      */
     String ^ getKonfigdatei(Int32 ^ totalAnzahlKekse);
 
-    /**
-     * Gibt das Grundrezept fuer Richtextbox als String zurueck
-     */
-    String getBeschreibung();
-
-
     /*
      * Getter
      */
