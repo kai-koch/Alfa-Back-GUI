@@ -107,4 +107,26 @@ Void Rezept::setBackZeit(Double^ bZ)
     return Void();
 }
 
+Rezept ^ Rezept::Clone()
+{
+    Rezept^ daClone = gcnew Rezept(teigname->ToString(), *basisAnzahl, form->ToString(), *groesseX, *groesseY, *backTemperatur, *backZeit);
+    for each(KeyValuePair<String^, Zutat^> kvp in zutaten)
+    {
+        daClone->addZutat(kvp.Value->Clone());
+    }
+    for each(KeyValuePair<String^, Zutat^> kvp in verzierungen) {
+        daClone->addVerzierung(kvp.Value->Clone());
+    }
+    return daClone;
+}
+
+String ^ Rezept::getZutatenWriteStr()
+{
+    String^ retVal = gcnew String("");
+    for each(KeyValuePair<String^, Zutat^> kvp in zutaten){
+        retVal += ""; //append String
+    }
+    return retVal;
+}
+
 Rezept::~Rezept() {}

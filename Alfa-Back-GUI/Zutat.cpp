@@ -27,3 +27,8 @@ Void Zutat::setMenge(Double^ mng)
     Menge = mng;
     return Void();
 }
+
+Zutat^ Zutat::Clone()
+{
+    return gcnew Zutat(Name->ToString(), *Menge, Masseinheit->ToString());
+}

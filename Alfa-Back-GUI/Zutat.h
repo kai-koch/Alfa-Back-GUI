@@ -22,11 +22,17 @@ public:
 
     /** Getter Name */
     String^ getName();
+
     /** Getter Menge */
     Double^ getMenge();
+
     /** Getter Masseinheit */
     String^ getMasseinheit();
+
     /** Setter Menge */
     Void setMenge(Double^ mng);
+
+    /** Deep-Clone dieser Instanz */
+    Zutat^ Clone();
 };
 

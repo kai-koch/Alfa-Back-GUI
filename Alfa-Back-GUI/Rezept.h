@@ -33,7 +33,7 @@ private:
     String^ form;
 
     /** Kantenlaenge x fuer Rechteck in das die Form eingepasst wird */
-    Double ^ groesseX;
+    Double^ groesseX;
 
     /** Kantenlaenge y fuer Rechteck in das die Form eingepasst wird */
     Double^ groesseY;
@@ -102,6 +102,17 @@ public:
     Void setGroesseY(Double^ gY);
     Void setBackTemperatur(Double^ bT);
     Void setBackZeit(Double^ bZ);
+
+    /**
+     * Gibt einen Clone dieser Instanz zurueck
+     */
+    Rezept^ Clone();
+
+    /**
+     * Gibt String von Zutaten im Komma Pipe Format zurück
+     * <example>Milch,2.5,l|Zucker,1000,g|Butter,300,g</example>
+     */
+    String^ getZutatenWriteStr();
 
     /**
      * @destructor

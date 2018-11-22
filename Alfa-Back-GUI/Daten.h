@@ -26,10 +26,10 @@ public:
     /** Gibt die Singleton Instanz zurueck */
     static property Daten^ InstanceOf { Daten^ get() { return %instance; } }
     
-    /** Gibt Dictionary mit Liste aller moeglichen Zutaten zurueck */
+    /** Gibt deep-clone von Dictionary mit Liste aller moeglichen Zutaten zurueck */
     Dictionary<String^, Zutat^>^ getAllZutaten();
 
-    /** Gibt Liste mit allen Rezepten zurueck */
+    /** Gibt deep-clone der Liste mit allen Rezepten zurueck */
     Dictionary<String^, Rezept^>^ getAllRezepte();
 
     /** 
@@ -60,12 +60,31 @@ public:
      * Default-Filename "rezept-daten.txt" fuer Datenfile wird benutzt
      */
     Void readFromDataFile();
-    /****/
+
+    /**
+     * Datenfile fuer Rezepte/Zutaten Lesen
+     * @param Name der Datendatei
+     */
     Void readFromDataFile(String^ Filename);
 
+    /**
+     * Datenfile mit Defaultnamen "rezept-daten.txt" zurueck schreiben
+     */
     Void writeToDataFile();
+
+    /**
+     * Datenfile mit angegbenen Namen schreiben.
+     */
     Void writeToDataFile(String^ Filename);
 
-    Void writeKonfigDatei(Rezept^ daRezept);
-    Void writeKonfigDatei(Rezept^ daRezept, String^ Filename);
+    /**
+     * KonfigDatei mit Default-Namen "back-konfig.txt" schreiben
+     */
+    static Void writeKonfigDatei(Rezept^ daRezept);
+
+    /**
+    * KonfigDatei mit angegebenen Namen schreiben
+    */
+    static Void writeKonfigDatei(Rezept^ daRezept, String^ Filename);
+
 };
