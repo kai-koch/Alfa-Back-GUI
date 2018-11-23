@@ -2,6 +2,7 @@
 #include "Zutat.h"
 #include "Rezept.h"
 
+using namespace System::IO;
 
 Daten::Daten() {}
 
@@ -99,7 +100,9 @@ Void Daten::writeKonfigDatei(String ^ daRezept)
 
 Void Daten::writeKonfigDatei(String^ daRezept, String ^ Filename)
 {
-    Console::WriteLine("Fake: Rezept nach " + Filename + " schreiben.");
-    Console::WriteLine(daRezept);
+    Console::WriteLine("Konfig nach " + Filename + " schreiben.");
+    StreamWriter^ sw = gcnew StreamWriter(Filename);
+    sw->WriteLine(daRezept);
+    sw->Close();
     return Void();
 }

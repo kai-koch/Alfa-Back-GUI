@@ -76,6 +76,8 @@ public:
 
     /**
      * Datenfile mit angegbenen Namen schreiben.
+     * @param Filename  Dateiname in das die Rezeptdaten geschrieben
+     *                  werden sollen
      * @TODO Schreiboperation
      * @TODO Throw Errors
      */
@@ -83,14 +85,20 @@ public:
 
     /**
      * KonfigDatei mit Default-Namen "back-konfig.txt" schreiben
+     * @param daRezept  String der das Rezept repraesentiert und der
+     *                  geschrieben werden soll
      */
     static Void writeKonfigDatei(String^ daRezept);
 
     /**
      * KonfigDatei mit angegebenen Namen schreiben
-     * @TODO Schreiboperation
-     * @TODO Throw Errors
+     * @param daRezept  String der das Rezept repraesentiert und der
+     *                  geschrieben werden soll
+     * @param Filename  Dateiname in das die Konfig-Daten geschrieben
+     *                  werden sollen
+     * @throws  UnauthorizedAccessException, ArgumentException, ArgumentNullException,
+                DirectoryNotFoundException, PathTooLongException, IOException,
+                SecurityException, ObjectDisposedException, IOException
      */
     static Void writeKonfigDatei(String^ daRezept, String^ Filename);
-
 };
