@@ -52,6 +52,9 @@
     <EmbeddedResource Include="Alfa-Back-Form.resx">
       <Filter>Ressourcendateien</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyPaint.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Alfa-Back-GUI.rc">
