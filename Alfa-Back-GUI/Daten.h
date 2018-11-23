@@ -71,6 +71,9 @@ public:
 
     /**
      * Datenfile mit Defaultnamen "rezept-daten.txt" zurueck schreiben
+     * @throws  UnauthorizedAccessException, ArgumentException, ArgumentNullException,
+     *          DirectoryNotFoundException, PathTooLongException, IOException,
+     *          SecurityException, ObjectDisposedException, IOException
      */
     Void writeToDataFile();
 
@@ -79,7 +82,9 @@ public:
      * @param Filename  Dateiname in das die Rezeptdaten geschrieben
      *                  werden sollen
      * @TODO Schreiboperation
-     * @TODO Throw Errors
+     * @throws  UnauthorizedAccessException, ArgumentException, ArgumentNullException,
+     *          DirectoryNotFoundException, PathTooLongException, IOException,
+     *          SecurityException, ObjectDisposedException, IOException
      */
     Void writeToDataFile(String^ Filename);
 
@@ -87,6 +92,9 @@ public:
      * KonfigDatei mit Default-Namen "back-konfig.txt" schreiben
      * @param daRezept  String der das Rezept repraesentiert und der
      *                  geschrieben werden soll
+     * @throws  UnauthorizedAccessException, ArgumentException, ArgumentNullException,
+     *          DirectoryNotFoundException, PathTooLongException, IOException,
+     *          SecurityException, ObjectDisposedException, IOException
      */
     static Void writeKonfigDatei(String^ daRezept);
 
@@ -97,8 +105,13 @@ public:
      * @param Filename  Dateiname in das die Konfig-Daten geschrieben
      *                  werden sollen
      * @throws  UnauthorizedAccessException, ArgumentException, ArgumentNullException,
-                DirectoryNotFoundException, PathTooLongException, IOException,
-                SecurityException, ObjectDisposedException, IOException
+     *          DirectoryNotFoundException, PathTooLongException, IOException,
+     *          SecurityException, ObjectDisposedException, IOException
      */
     static Void writeKonfigDatei(String^ daRezept, String^ Filename);
+
+    /**
+    * Erstelle Zutatenliste mit 0-Mengen aus allen Rezepte
+    */
+    Void buildZutatenlisteFromRezepteListe();
 };

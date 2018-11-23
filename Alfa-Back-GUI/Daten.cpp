@@ -47,13 +47,15 @@ Zutat ^ Daten::getZutatByName(String^ daName)
 
 Void Daten::setRezeptByName(Rezept^ daRezept)
 {
-    rezepte->Add(daRezept->getTeigname()->ToString(), daRezept->Clone());
+    //Key Neu oder ueberschreben wenn bereits vorhanden!
+    rezepte[daRezept->getTeigname()->ToString()] = daRezept->Clone();
     return Void();
 }
 
 Void Daten::setZutatByName(Zutat ^ daZutat)
 {
-    zutaten->Add(daZutat->getName()->ToString(), daZutat->Clone());    
+    //Key Neu oder ueberschreben wenn bereits vorhanden!
+    zutaten[daZutat->getName()->ToString()] = daZutat->Clone();
     return Void();
 }
 
@@ -90,6 +92,11 @@ Void Daten::writeToDataFile(String ^ Filename)
 {
     Console::WriteLine("Write data to File: " + Filename);
     StreamWriter^ sw = gcnew StreamWriter(Filename);
+    for each(KeyValuePair<String^, Zutat^> kvp in zutaten)
+    {
+        sw->WriteLine(kvp.Value->getCommaStr());
+    }
+    sw->WriteLine("--");
     for each(KeyValuePair<String^, Rezept^> kvp in rezepte) 
     {
         sw->WriteLine(kvp.Value->getDataLine());
@@ -110,5 +117,22 @@ Void Daten::writeKonfigDatei(String^ daRezept, String ^ Filename)
     StreamWriter^ sw = gcnew StreamWriter(Filename);
     sw->WriteLine(daRezept);
     sw->Close();
+    return Void();
+}
+
+Void Daten::buildZutatenlisteFromRezepteListe()
+{
+    Console::WriteLine("Zutatenliste aufbauen");
+    for each(KeyValuePair<String^,Rezept^> kvp in rezepte)
+    {
+        for each (KeyValuePair<String^, Zutat^> swp in kvp.Value->getZutatenListe())
+        {
+            zutaten[swp.Value->getName()->ToString()] = gcnew Zutat(swp.Value->getName()->ToString(), 0.0, swp.Value->getMasseinheit()->ToString());
+        }
+        for each (KeyValuePair<String^, Zutat^> swp in kvp.Value->getVerzierungsListe())
+        {
+            zutaten[swp.Value->getName()->ToString()] = gcnew Zutat(swp.Value->getName()->ToString(), 0.0, swp.Value->getMasseinheit()->ToString());
+        }
+    }
     return Void();
 }

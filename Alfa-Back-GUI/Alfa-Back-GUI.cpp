@@ -14,6 +14,7 @@ int main()
     for each(KeyValuePair<String^,Rezept^> kvp in cookies->getAllRezepte()) {
         cookies->writeKonfigDatei(kvp.Value->getKonfigdatei(10000), kvp.Key + "-konfig.txt");
     }
+    cookies->buildZutatenlisteFromRezepteListe();
     // Rezept und Zutatendaten in Daten-File schreiben
     cookies->writeToDataFile();
 

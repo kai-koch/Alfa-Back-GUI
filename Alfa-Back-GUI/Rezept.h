@@ -131,9 +131,19 @@ public:
     Void factorForProduktionBatch(Double rezeptfactor);
 
     /**
-    * Gibt Zeile für rezept-daten.txt zurueck
-    */
-    String ^ getDataLine();
+     * Gibt Zeile für rezept-daten.txt zurueck
+     */
+    String^ getDataLine();
+
+    /**
+     * Gibt Deep-Clone der Zutatenliste zurueck
+     */
+    Dictionary<String^,Zutat^>^ getZutatenListe();
+
+    /**
+     * Gibt Deep-Clone der Verzierungsliste zurueck
+     */
+    Dictionary<String^, Zutat^>^ getVerzierungsListe();
 
     /**
      * @destructor

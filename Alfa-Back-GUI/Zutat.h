@@ -13,7 +13,7 @@ private:
     String^ Name;
     /** Menge der Zutat */
     Double^ Menge;
-    /** Masseinheit der Zutat g, Kg, l, ml, °C */
+    /** Masseinheit der Zutat g, Kg, l, ml */
     String^ Masseinheit;
 public:
     /**

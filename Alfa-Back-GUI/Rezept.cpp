@@ -185,4 +185,14 @@ String^ Rezept::getDataLine()
     return String::Join("\t", config);
 }
 
+Dictionary<String^, Zutat^>^ Rezept::getZutatenListe()
+{
+    return gcnew Dictionary<String^, Zutat^>(zutaten);
+}
+
+Dictionary<String^, Zutat^>^ Rezept::getVerzierungsListe()
+{
+    return gcnew Dictionary<String^, Zutat^>(verzierungen);
+}
+
 Rezept::~Rezept() {}
