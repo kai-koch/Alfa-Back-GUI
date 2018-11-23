@@ -2,6 +2,10 @@
 
 using namespace System;
 
+/**
+ * Klasse repraesentiert Zutaten UND Verzierungen, als Spezialfall von Zutat ohne
+ *  Diversifizierung
+ */
 ref class Zutat
 {
 private:
@@ -34,5 +38,8 @@ public:
 
     /** Deep-Clone dieser Instanz */
     Zutat^ Clone();
+
+    /** Gibt Comma-Seperated String für Konfig-Datei zurueck */
+    String^ getCommaStr();
 };
 

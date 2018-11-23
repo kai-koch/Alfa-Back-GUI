@@ -91,23 +91,15 @@ Void Daten::writeToDataFile(String ^ Filename)
     return Void();
 }
 
-Void Daten::writeKonfigDatei(Rezept ^ daRezept)
+Void Daten::writeKonfigDatei(String ^ daRezept)
 {
     writeKonfigDatei(daRezept, "back-konfig.txt");
     return Void();
 }
 
-Void Daten::writeKonfigDatei(Rezept ^ daRezept, String ^ Filename)
+Void Daten::writeKonfigDatei(String^ daRezept, String ^ Filename)
 {
-    Console::WriteLine("Rezept " + daRezept->getTeigname() + " nach " + Filename + " schreiben.");
-    String ^ wStr = gcnew String(
-        "teigname:" + daRezept->getTeigname() +
-        "\tbasisAnzahl:" + daRezept->getBasisAnzahl() +
-        "\tform:" + daRezept->getForm() +
-        "\tgroesseX:" + daRezept->getGroesseX()->ToString() +
-        "\tgroesseY:" + daRezept->getGroesseY()->ToString() +
-        "\tbackTemperatur:" + daRezept->getBackTemperatur()->ToString() +
-        "\tbackZeit:" + daRezept->getBackZeit()->ToString()
-    );
+    Console::WriteLine("Fake: Rezept nach " + Filename + " schreiben.");
+    Console::WriteLine(daRezept);
     return Void();
 }

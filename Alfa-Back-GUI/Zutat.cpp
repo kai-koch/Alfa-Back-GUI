@@ -32,3 +32,8 @@ Zutat^ Zutat::Clone()
 {
     return gcnew Zutat(Name->ToString(), *Menge, Masseinheit->ToString());
 }
+
+String^ Zutat::getCommaStr()
+{
+    return String::Join(",", gcnew array<String^>{Name, Menge->ToString(), Masseinheit});
+}

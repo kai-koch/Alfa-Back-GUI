@@ -109,10 +109,23 @@ public:
     Rezept^ Clone();
 
     /**
-     * Gibt String von Zutaten im Komma Pipe Format zurück
-     * <example>Milch,2.5,l|Zucker,1000,g|Butter,300,g</example>
+     * Gibt String von Zutaten im Doppelpunkt->Pipe->Komma Format zurück
+     * <example>Zutaten:Milch,2.5,l|Zucker,1000,g|Butter,300,g</example>
      */
     String^ getZutatenWriteStr();
+
+    /**
+     * Gibt String von Verzierungen im Doppelpunkt->Pipe->Komma Format zurück
+     * <example>Verzierungen:Zuckerguss,2.5,l|Schokostreusel,1000,g</example>
+     */
+    String^ getVerzierungenWriteStr();
+
+    /**
+     * Rechnet die Mengen im Rezept für eine neue Produktion um
+     * @param rezeptfactor  Wird berechnet aus der Menge der zu produzierenden
+     *                      Kekse geteilt durch die Basis Anzahl im  ausgangsrezept
+     */
+    Void factorForProduktionBatch(Double rezeptfactor);
 
     /**
      * @destructor

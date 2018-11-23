@@ -80,11 +80,11 @@ public:
     /**
      * KonfigDatei mit Default-Namen "back-konfig.txt" schreiben
      */
-    static Void writeKonfigDatei(Rezept^ daRezept);
+    static Void writeKonfigDatei(String^ daRezept);
 
     /**
     * KonfigDatei mit angegebenen Namen schreiben
     */
-    static Void writeKonfigDatei(Rezept^ daRezept, String^ Filename);
+    static Void writeKonfigDatei(String^ daRezept, String^ Filename);
 
 };

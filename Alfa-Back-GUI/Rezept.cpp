@@ -26,8 +26,19 @@ Void Rezept::addVerzierung(Zutat^ ingredient)
 String^ Rezept::getKonfigdatei(Int32^ totalAnzahlKekse)
 {
     double rezeptfactor = *totalAnzahlKekse / *basisAnzahl;
-
-    return "";
+    Rezept^ daRezept = this->Clone();
+    daRezept->factorForProduktionBatch(rezeptfactor);
+    array<String^>^ config = gcnew array<String^>(9);
+    config[0] = "teigname:" + daRezept->getTeigname();
+    config[1] = "basisAnzahl:" + daRezept->getBasisAnzahl();
+    config[2] = "form:" + daRezept->getForm();
+    config[3] = "groesseX:" + daRezept->getGroesseX()->ToString();
+    config[4] = "groesseY:" + daRezept->getGroesseY()->ToString();
+    config[5] = "backTemperatur:" + daRezept->getBackTemperatur()->ToString();
+    config[6] = "backZeit:" + daRezept->getBackZeit()->ToString();
+    config[7] = daRezept->getZutatenWriteStr();
+    config[8] = daRezept->getVerzierungenWriteStr();
+    return String::Join("\t", config);
 }
 
 String^ Rezept::getTeigname()
@@ -122,11 +133,41 @@ Rezept ^ Rezept::Clone()
 
 String ^ Rezept::getZutatenWriteStr()
 {
-    String^ retVal = gcnew String("");
-    for each(KeyValuePair<String^, Zutat^> kvp in zutaten){
-        retVal += ""; //append String
+    array<String^>^ zuts = gcnew array<String^>(zutaten->Count);
+    int i = 0;
+    for each(KeyValuePair<String^, Zutat^> kvp in zutaten)
+    {
+        zuts[i] = kvp.Value->getCommaStr();
+        i += 1;
     }
-    return retVal;
+    return "Zutaten:" + String::Join("|", zuts);
+}
+
+
+
+String ^ Rezept::getVerzierungenWriteStr()
+{
+    array<String^>^ vers = gcnew array<String^>(verzierungen->Count);
+    int i = 0;
+    for each(KeyValuePair<String^, Zutat^> kvp in verzierungen)
+    {
+        vers[i] = kvp.Value->getCommaStr();
+        i += 1;
+    }
+    return "Verzierungen:" + String::Join("|", vers);
+}
+
+Void Rezept::factorForProduktionBatch(Double rezeptfactor)
+{
+    *basisAnzahl *= rezeptfactor;
+    for each (KeyValuePair<String^, Zutat^> kvp in zutaten)
+    {
+        kvp.Value->setMenge(*kvp.Value->getMenge() * rezeptfactor);
+    }
+    for each (KeyValuePair<String^, Zutat^> kvp in verzierungen)
+    {
+        kvp.Value->setMenge(*kvp.Value->getMenge() * rezeptfactor);
+    }
 }
 
 Rezept::~Rezept() {}
