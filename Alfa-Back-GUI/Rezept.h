@@ -6,7 +6,7 @@ using namespace System::Collections::Generic;
 
 /**
  * Klasse Rezept um Teig- und Verzierungszusammensetzung zu speichern
- *  und um Konfiguration zu liefern und Richtextbox zu befuellen.
+ *  und um Konfiguration zu liefern.
  */
 ref class Rezept
 {
@@ -23,6 +23,7 @@ private:
      * von Keksen
      */
     Dictionary<String^, Zutat^>^ verzierungen = gcnew Dictionary<String^, Zutat^>();
+
     /** Name fuer Teig */
     String^ teigname;
 
@@ -50,7 +51,7 @@ public:
      * Properties der Klasse setzen
      * @construktor
      * @param tn Teigname
-     * @param bAnz Anzahl an Keksen die beim Grundrezept gestanzt werden koennen
+     * @param bAnz Anzahl an Keksen, die beim Grundrezept gestanzt werden koennen
      * @param fo Form der Kekse
      * @param gX Kantenlaenge x
      * @param gY Kantenlaenge Y

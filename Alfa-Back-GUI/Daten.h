@@ -64,6 +64,8 @@ public:
     /**
      * Datenfile fuer Rezepte/Zutaten Lesen
      * @param Name der Datendatei
+     * @TODO Lesen von Datei
+     * @TODO Throw Errors
      */
     Void readFromDataFile(String^ Filename);
 
@@ -74,6 +76,8 @@ public:
 
     /**
      * Datenfile mit angegbenen Namen schreiben.
+     * @TODO Schreiboperation
+     * @TODO Throw Errors
      */
     Void writeToDataFile(String^ Filename);
 
@@ -83,8 +87,10 @@ public:
     static Void writeKonfigDatei(String^ daRezept);
 
     /**
-    * KonfigDatei mit angegebenen Namen schreiben
-    */
+     * KonfigDatei mit angegebenen Namen schreiben
+     * @TODO Schreiboperation
+     * @TODO Throw Errors
+     */
     static Void writeKonfigDatei(String^ daRezept, String^ Filename);
 
 };

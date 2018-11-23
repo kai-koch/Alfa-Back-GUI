@@ -4,7 +4,7 @@ using namespace System;
 
 /**
  * Klasse repraesentiert Zutaten UND Verzierungen, als Spezialfall von Zutat ohne
- *  Diversifizierung
+ * praktische Diversifizierung
  */
 ref class Zutat
 {
