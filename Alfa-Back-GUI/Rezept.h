@@ -64,6 +64,7 @@ public:
      * Fuegt eine Zutat mit Mengenangabe zur Zutatenliste hinzu
      * @param name Name der Zutat
      * @param einheiten Anzahl der Einheiten, die fuer Rezept benoetigt werden
+     * @todo Doublettencheck
      */
     Void addZutat(Zutat^ ingredient);
 
@@ -72,6 +73,7 @@ public:
     * hinzu
     * @param name Name der Zutat
     * @param einheiten Anzahl der Einheiten, die fuer Rezept benoetigt werden
+    * @todo Doublettencheck
     */
     Void addVerzierung(Zutat^ ingredient);
 
@@ -127,6 +129,11 @@ public:
      *                      Kekse geteilt durch die Basis Anzahl im  ausgangsrezept
      */
     Void factorForProduktionBatch(Double rezeptfactor);
+
+    /**
+    * Gibt Zeile für rezept-daten.txt zurueck
+    */
+    String ^ getDataLine();
 
     /**
      * @destructor

@@ -12,7 +12,7 @@ int main()
     for each(KeyValuePair<String^,Rezept^> kvp in cookies->getAllRezepte()) {
         cookies->writeKonfigDatei(kvp.Value->getKonfigdatei(10000), kvp.Key + "-konfig.txt");
     }
-
+    cookies->writeToDataFile();
     AlfaBackForm ^ daForm = gcnew AlfaBackForm();
     daForm->ShowDialog();
     return 0;

@@ -89,6 +89,12 @@ Void Daten::writeToDataFile()
 Void Daten::writeToDataFile(String ^ Filename)
 {
     Console::WriteLine("Write data to File: " + Filename);
+    StreamWriter^ sw = gcnew StreamWriter(Filename);
+    for each(KeyValuePair<String^, Rezept^> kvp in rezepte) 
+    {
+        sw->WriteLine(kvp.Value->getDataLine());
+    }
+    sw->Close();
     return Void();
 }
 

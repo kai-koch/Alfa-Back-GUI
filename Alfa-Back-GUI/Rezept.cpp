@@ -170,4 +170,19 @@ Void Rezept::factorForProduktionBatch(Double rezeptfactor)
     }
 }
 
+String^ Rezept::getDataLine()
+{
+    array<String^>^ config = gcnew array<String^>(9);
+    config[0] = "teigname:" + getTeigname();
+    config[1] = "basisAnzahl:" + getBasisAnzahl();
+    config[2] = "form:" + getForm();
+    config[3] = "groesseX:" + getGroesseX()->ToString();
+    config[4] = "groesseY:" + getGroesseY()->ToString();
+    config[5] = "backTemperatur:" + getBackTemperatur()->ToString();
+    config[6] = "backZeit:" + getBackZeit()->ToString();
+    config[7] = getZutatenWriteStr();
+    config[8] = getVerzierungenWriteStr();
+    return String::Join("\t", config);
+}
+
 Rezept::~Rezept() {}
