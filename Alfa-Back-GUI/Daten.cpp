@@ -1,39 +1,114 @@
 #include "Daten.h"
+#include "Zutat.h"
+#include "Rezept.h"
 
-Daten::Daten() {
-/*        
-this->addZutatenEinheiten("Backpulver", "g");
-this->addZutatenEinheiten("Backzeit", "min");
+using namespace System::IO;
 
-"Eier" : "l",
-        "GroesseX" : "mm",
-        "GroesseY" : "mm",
-        "Haselnuesse" : "g",
-        "Kakao" : "g",
-        "Kakaoguss" : "l",
-        "Mandeln" : "g",
-        "Marmelade" : "l",
-        "Mehl" : "g",
-        "Milch" : "l",
-        "Pflanzenfett" : "g",
-        "Puderzucker" : "g",
-        "Rum" : "l",
-        "Schokostreusel" : "g",
-        "Temperatur" : "°C",
-        "Vanillezucker" : "g",
-        "Walnuesse" : "g",
-        "Zimt" : "g",
-        "Zitronenguss" : "l",
-        "Zitronenpulver" : "g",
-        "Zitronenzimtguss" : "l",
-        "Zucker" : "g",
-        "Zuckerstreusel(bunt)" : "g",
-*/
-
-}
+Daten::Daten() {}
 
 Daten::Daten(const Daten %)
 {
     throw gcnew System::InvalidOperationException("Daten cannot be copy-constructed");
 }
 
+Dictionary<String^, Zutat^>^ Daten::getAllZutaten()
+{
+    return gcnew Dictionary<String^, Zutat^>(zutaten);
+}
+
+Dictionary<String^, Rezept^>^ Daten::getAllRezepte()
+{
+    return gcnew Dictionary<String^, Rezept^>(rezepte);
+}
+
+Rezept ^ Daten::getRezeptByName(String ^ daName)
+{
+    if (rezepte->ContainsKey(daName)) 
+    {
+        return rezepte[daName]->Clone();
+    }
+    else
+    {
+        return nullptr;
+    }
+}
+
+Zutat ^ Daten::getZutatByName(String^ daName)
+{
+    if (zutaten->ContainsKey(daName))
+    {
+        return zutaten[daName]->Clone();
+    }
+    else
+    {
+        return nullptr;
+    }
+}
+
+Void Daten::setRezeptByName(Rezept^ daRezept)
+{
+    rezepte->Add(daRezept->getTeigname()->ToString(), daRezept->Clone());
+    return Void();
+}
+
+Void Daten::setZutatByName(Zutat ^ daZutat)
+{
+    zutaten->Add(daZutat->getName()->ToString(), daZutat->Clone());    
+    return Void();
+}
+
+Void Daten::readFromDataFile()
+{
+    readFromDataFile("rezept-daten.txt");
+    return Void();
+}
+
+Void Daten::readFromDataFile(String ^ Filename)
+{
+    Console::WriteLine("Fake Read data from File: " + Filename);
+    Rezept^ aRez = gcnew Rezept("Schokokeks", 100.0, "Kreis", 60.0, 60.0, 200.0, 30.0);
+    aRez->addZutat(gcnew Zutat("Backpulver", 100.0, "g"));
+    aRez->addZutat(gcnew Zutat("Eier", 0.9, "l"));
+    aRez->addZutat(gcnew Zutat("Kakao", 700.0, "g"));
+    aRez->addZutat(gcnew Zutat("Mehl", 900.0, "g"));
+    aRez->addZutat(gcnew Zutat("Milch", 4.0, "l"));
+    aRez->addZutat(gcnew Zutat("Pflanzenfett", 500.0, "g"));
+    aRez->addZutat(gcnew Zutat("Zucker", 1000.0, "g"));
+    aRez->addVerzierung(gcnew Zutat("Kakaoguss", 0.3, "l"));
+    aRez->addVerzierung(gcnew Zutat("Schokostreusel", 300.0, "g"));
+    setRezeptByName(aRez);
+    return Void();
+}
+
+Void Daten::writeToDataFile()
+{
+    writeToDataFile("rezept-daten.txt");
+    return Void();
+}
+
+Void Daten::writeToDataFile(String ^ Filename)
+{
+    Console::WriteLine("Write data to File: " + Filename);
+    StreamWriter^ sw = gcnew StreamWriter(Filename);
+    for each(KeyValuePair<String^, Rezept^> kvp in rezepte) 
+    {
+        sw->WriteLine(kvp.Value->getDataLine());
+    }
+    sw->Close();
+    return Void();
+}
+
+Void Daten::writeKonfigDatei(String ^ daRezept)
+{
+    writeKonfigDatei(daRezept, "back-konfig.txt");
+    return Void();
+}
+
+Void Daten::writeKonfigDatei(String^ daRezept, String ^ Filename)
+{
+    Console::WriteLine("Konfig nach " + Filename + " schreiben.");
+    StreamWriter^ sw = gcnew StreamWriter(Filename);
+    sw->WriteLine(daRezept);
+    sw->Close();
+    return Void();
+}

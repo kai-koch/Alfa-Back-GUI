@@ -2,6 +2,10 @@
 
 using namespace System;
 
+/**
+ * Klasse repraesentiert Zutaten UND Verzierungen, als Spezialfall von Zutat ohne
+ * praktische Diversifizierung
+ */
 ref class Zutat
 {
 private:
@@ -22,11 +26,20 @@ public:
 
     /** Getter Name */
     String^ getName();
+
     /** Getter Menge */
     Double^ getMenge();
+
     /** Getter Masseinheit */
     String^ getMasseinheit();
+
     /** Setter Menge */
     Void setMenge(Double^ mng);
+
+    /** Deep-Clone dieser Instanz */
+    Zutat^ Clone();
+
+    /** Gibt Comma-Seperated String für Konfig-Datei zurueck */
+    String^ getCommaStr();
 };
 
