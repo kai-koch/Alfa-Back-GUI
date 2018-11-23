@@ -18,9 +18,6 @@
     <ClCompile Include="Alfa-Back-GUI.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Alfa-Back-Form.cpp">
-      <Filter>Headerdateien</Filter>
-    </ClCompile>
     <ClCompile Include="Daten.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -30,11 +27,11 @@
     <ClCompile Include="Rezept.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="AlfaBackForm.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Alfa-Back-Form.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Rezept.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -47,15 +44,18 @@
     <ClInclude Include="resource.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Alfa-Back-Form.resx">
-      <Filter>Ressourcendateien</Filter>
-    </EmbeddedResource>
+    <ClInclude Include="AlfaBackForm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Alfa-Back-GUI.rc">
       <Filter>Ressourcendateien</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AlfaBackForm.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

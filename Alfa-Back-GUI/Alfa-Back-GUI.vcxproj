@@ -124,8 +124,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Alfa-Back-Form.cpp" />
     <ClCompile Include="Alfa-Back-GUI.cpp" />
+    <ClCompile Include="AlfaBackForm.cpp" />
     <ClCompile Include="Daten.cpp" />
     <ClCompile Include="Rezept.cpp" />
     <ClCompile Include="Zutat.cpp" />
@@ -138,18 +138,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Alfa-Back-Form.h">
+    <ClInclude Include="AlfaBackForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Daten.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Rezept.h" />
     <ClInclude Include="Zutat.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Alfa-Back-Form.resx">
-      <DependentUpon>Alfa-Back-Form.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Alfa-Back-GUI.rc" />
