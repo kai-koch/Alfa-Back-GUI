@@ -32,7 +32,7 @@ private:
     /** Form der Kekse: "Kreis", "Stern", "Oval", "Tanne", etc. */
     String ^ form;
 
-    /** Kantenlaenge x fuer Rechteck in das die Form eingepasst wird */
+    
     Double ^ groesseX;
 
     /** Kantenlaenge y fuer Rechteck in das die Form eingepasst wird */
