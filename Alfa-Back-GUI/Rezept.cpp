@@ -27,7 +27,7 @@ String^ Rezept::getKonfigdatei(Int32^ totalAnzahlKekse)
     double rezeptfactor = *totalAnzahlKekse / *basisAnzahl;
     Rezept^ daRezept = this->Clone();
     daRezept->factorForProduktionBatch(rezeptfactor);
-    array<String^>^ config = gcnew array<String^>(9);
+    array<String^>^ config = gcnew array<String^>(8);
     config[0] = "teigname:" + daRezept->getTeigname();
     config[1] = "basisAnzahl:" + daRezept->getBasisAnzahl();
     config[2] = "form:" + daRezept->getForm();

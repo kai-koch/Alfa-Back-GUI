@@ -1,1 +1,1 @@
-teigname:Bauernkeks	basisAnzahl:10000	form:Fuenfeck	groesse:gross	backTemperatur:220	backZeit:35	Zutaten:Backpulver,10000,g|Eier,150,l|Mehl,170000,g|Milch,500,l|Pflanzenfett,40000,g|Zucker,70000,g|Kakao,200000,g	Verzierungen:Zimt,30000,g|Kakaoguss,30,l	
+teigname:Bauernkeks	basisAnzahl:10000	form:Fuenfeck	groesse:gross	backTemperatur:220	backZeit:35	Zutaten:Backpulver,10000,g|Eier,150,l|Mehl,170000,g|Milch,500,l|Pflanzenfett,40000,g|Zucker,70000,g|Kakao,200000,g	Verzierungen:Zimt,30000,g|Kakaoguss,30,l
