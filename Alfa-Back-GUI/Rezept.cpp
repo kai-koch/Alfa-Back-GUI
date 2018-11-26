@@ -1,12 +1,11 @@
 #include "Rezept.h"
 
-Rezept::Rezept(String^ tn, Double^ bAnz, String^ fo, Double^ gX, Double^ gY, Double^ bTemp, Double^ bz)
+Rezept::Rezept(String^ tn, Double^ bAnz, String^ fo, String^ gro, Double^ bTemp, Double^ bz)
 {
     teigname = tn;
     basisAnzahl = bAnz;
     form = fo;
-    groesseX = gX;
-    groesseY = gY;
+    groesse = gro;
     backTemperatur = bTemp;
     backZeit = bz;
 }
@@ -32,12 +31,11 @@ String^ Rezept::getKonfigdatei(Int32^ totalAnzahlKekse)
     config[0] = "teigname:" + daRezept->getTeigname();
     config[1] = "basisAnzahl:" + daRezept->getBasisAnzahl();
     config[2] = "form:" + daRezept->getForm();
-    config[3] = "groesseX:" + daRezept->getGroesseX()->ToString();
-    config[4] = "groesseY:" + daRezept->getGroesseY()->ToString();
-    config[5] = "backTemperatur:" + daRezept->getBackTemperatur()->ToString();
-    config[6] = "backZeit:" + daRezept->getBackZeit()->ToString();
-    config[7] = daRezept->getZutatenWriteStr();
-    config[8] = daRezept->getVerzierungenWriteStr();
+    config[3] = "groesse:" + daRezept->getGroesse();
+    config[4] = "backTemperatur:" + daRezept->getBackTemperatur()->ToString();
+    config[5] = "backZeit:" + daRezept->getBackZeit()->ToString();
+    config[6] = daRezept->getZutatenWriteStr();
+    config[7] = daRezept->getVerzierungenWriteStr();
     return String::Join("\t", config);
 }
 
@@ -56,14 +54,9 @@ String^ Rezept::getForm()
     return form;
 }
 
-Double^ Rezept::getGroesseX()
+String ^ Rezept::getGroesse()
 {
-    return groesseX;
-}
-
-Double^ Rezept::getGroesseY()
-{
-    return groesseY;
+    return groesse;
 }
 
 Double ^ Rezept::getBackTemperatur()
@@ -94,15 +87,9 @@ Void Rezept::setForm(String^ f)
     return Void();
 }
 
-Void Rezept::setGroesseX(Double^ gX)
+Void Rezept::setGroesse(String^ gro)
 {
-    groesseX = gX;
-    return Void();
-}
-
-Void Rezept::setGroesseY(Double^ gY)
-{
-    groesseY = gY;
+    groesse = gro;
     return Void();
 }
 
@@ -120,7 +107,7 @@ Void Rezept::setBackZeit(Double^ bZ)
 
 Rezept ^ Rezept::Clone()
 {
-    Rezept^ daClone = gcnew Rezept(teigname->ToString(), *basisAnzahl, form->ToString(), *groesseX, *groesseY, *backTemperatur, *backZeit);
+    Rezept^ daClone = gcnew Rezept(teigname->ToString(), *basisAnzahl, form->ToString(), groesse->ToString(), *backTemperatur, *backZeit);
     for each(KeyValuePair<String^, Zutat^> kvp in zutaten)
     {
         daClone->addZutat(kvp.Value->Clone());
@@ -176,12 +163,11 @@ String^ Rezept::getDataLine()
     config[0] = "teigname:" + getTeigname();
     config[1] = "basisAnzahl:" + getBasisAnzahl();
     config[2] = "form:" + getForm();
-    config[3] = "groesseX:" + getGroesseX()->ToString();
-    config[4] = "groesseY:" + getGroesseY()->ToString();
-    config[5] = "backTemperatur:" + getBackTemperatur()->ToString();
-    config[6] = "backZeit:" + getBackZeit()->ToString();
-    config[7] = getZutatenWriteStr();
-    config[8] = getVerzierungenWriteStr();
+    config[3] = "groesse:" + getGroesse();
+    config[4] = "backTemperatur:" + getBackTemperatur()->ToString();
+    config[5] = "backZeit:" + getBackZeit()->ToString();
+    config[6] = getZutatenWriteStr();
+    config[7] = getVerzierungenWriteStr();
     return String::Join("\t", config);
 }
 

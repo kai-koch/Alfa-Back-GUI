@@ -68,7 +68,7 @@ Void Daten::readFromDataFile()
 Void Daten::readFromDataFile(String ^ Filename)
 {
     Console::WriteLine("Fake Read data from File: " + Filename);
-    Rezept^ aRez = gcnew Rezept("Schokokeks", 100.0, "Kreis", 60.0, 60.0, 200.0, 30.0);
+    Rezept^ aRez = gcnew Rezept("Schokokeks", 100.0, "Kreis", "mittel", 200.0, 30.0);
     aRez->addZutat(gcnew Zutat("Backpulver", 100.0, "g"));
     aRez->addZutat(gcnew Zutat("Eier", 0.9, "l"));
     aRez->addZutat(gcnew Zutat("Kakao", 700.0, "g"));

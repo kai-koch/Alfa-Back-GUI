@@ -33,11 +33,8 @@ private:
     /** Form der Kekse: "Kreis", "Stern", "Oval", "Tanne", etc. */
     String^ form;
 
-    /** Kantenlaenge x fuer Rechteck in das die Form eingepasst wird */
-    Double^ groesseX;
-
-    /** Kantenlaenge y fuer Rechteck in das die Form eingepasst wird */
-    Double^ groesseY;
+   /** Groesse der Kekse: klein, mittel oder gross */
+    String^ groesse;
 
     /** Temperatur zum Backen der Kekse in °C */
     Double^ backTemperatur;
@@ -58,7 +55,7 @@ public:
      * @param bTemp Backtemperatur
      * @param bz Backzeit
      */
-    Rezept(String^ tn, Double^ bAnz, String^ fo, Double^ gX, Double^ gY, Double^ bTemp, Double^ bz);
+    Rezept(String^ tn, Double^ bAnz, String^ fo, String^ gro, Double^ bTemp, Double^ bz);
 
     /**
      * Fuegt eine Zutat mit Mengenangabe zur Zutatenliste hinzu
@@ -90,8 +87,7 @@ public:
     String^ getTeigname();
     Double^ getBasisAnzahl();
     String^ getForm();
-    Double^ getGroesseX();
-    Double^ getGroesseY();
+    String^ getGroesse();
     Double^ getBackTemperatur();
     Double^ getBackZeit();
 
@@ -101,8 +97,7 @@ public:
     Void setTeigname(String^ tn);
     Void setBasisAnzahl(Double^ ba);
     Void setForm(String^ f);
-    Void setGroesseX(Double^ gX);
-    Void setGroesseY(Double^ gY);
+    Void setGroesse(String^ gro);
     Void setBackTemperatur(Double^ bT);
     Void setBackZeit(Double^ bZ);
 
