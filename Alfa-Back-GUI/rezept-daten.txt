@@ -1,24 +1,24 @@
 Backpulver,0,g
-Eier,0,l
+Eier,0,5
 Kakao,0,g
 Mehl,0,g
 Milch,0,l
 Pflanzenfett,0,g
 Zucker,0,g
-Kakaoguss,0,l
+Kakaoguss,0,3
 Schokostreusel,0,g
 Zitronenpulver,0,g
 Zuckerstreusel(bunt),0,g
-Zitronenguss,0,l
+Zitronenguss,0,3333
 Zimt,0,g
-Rum,0,l
+Rum,0,2
 Vanillinzucker,0,g
 Haselnuesse,0,g
 Mandeln,0,g
 Marmelade,0,l
 Walnuesse,0,g
 --
-teigname:Schokokeks	basisAnzahl:100	form:Kreis	groesse:mittel	backTemperatur:180	backZeit:40	Zutaten:Backpulver,100,g|Eier,0,9,l|Kakao,700,g|Mehl,900,g|Milch,4,l|Pflanzenfett,500,g|Zucker,1000,g	Verzierungen:Kakaoguss,0,3,l|Schokostreusel,300,g
-teigname:Zitronensterne	basisAnzahl:100	form:Stern	groesse:mittel	backTemperatur:200	backZeit:30	Zutaten:Backpulver,100,g|Eier,1,1,l|Mehl,1200,g|Milch,5,l|Pflanzenfett,800,g|Zucker,1100,g|Zitronenpulver,200,g	Verzierungen:Zuckerstreusel(bunt),333,g|Zitronenguss,0,3333,l
-teigname:Bauernkeks	basisAnzahl:100	form:Fuenfeck	groesse:gross	backTemperatur:220	backZeit:35	Zutaten:Backpulver,100,g|Eier,1,5,l|Mehl,1700,g|Milch,5,l|Pflanzenfett,400,g|Zucker,700,g|Kakao,2000,g	Verzierungen:Zimt,300,g|Kakaoguss,0,3,l
-teigname:Nusseckkeks	basisAnzahl:200	form:Dreieck	groesse:gross	backTemperatur:225	backZeit:40	Zutaten:Backpulver,700,g|Eier,1,5,l|Mehl,1700,g|Milch,5,l|Pflanzenfett,900,g|Zucker,700,g|Kakao,2000,g|Rum,0,2,l|Vanillinzucker,300,g	Verzierungen:Haselnuesse,300,g|Kakaoguss,0,3,l|Mandeln,300,g|Marmelade,3,l|Walnuesse,300,g
+teigname:Schokokeks	basisAnzahl:100	form:Kreis	groesse:mittel	backTemperatur:180	backZeit:40	Zutaten:Backpulver,100,g|Eier,0,9|Kakao,700,g|Mehl,900,g|Milch,4,l|Pflanzenfett,500,g|Zucker,1000,g	Verzierungen:Kakaoguss,0,3|Schokostreusel,300,g
+teigname:Zitronensterne	basisAnzahl:100	form:Stern	groesse:mittel	backTemperatur:200	backZeit:30	Zutaten:Backpulver,100,g|Eier,1,1|Mehl,1200,g|Milch,5,l|Pflanzenfett,800,g|Zucker,1100,g|Zitronenpulver,200,g	Verzierungen:Zuckerstreusel(bunt),333,g|Zitronenguss,0,3333
+teigname:Bauernkeks	basisAnzahl:100	form:Fuenfeck	groesse:gross	backTemperatur:220	backZeit:35	Zutaten:Backpulver,100,g|Eier,1,5|Mehl,1700,g|Milch,5,l|Pflanzenfett,400,g|Zucker,700,g|Kakao,2000,g	Verzierungen:Zimt,300,g|Kakaoguss,0,3
+teigname:Nusseckkeks	basisAnzahl:200	form:Dreieck	groesse:gross	backTemperatur:225	backZeit:40	Zutaten:Backpulver,700,g|Eier,1,5|Mehl,1700,g|Milch,5,l|Pflanzenfett,900,g|Zucker,700,g|Kakao,2000,g|Rum,0,2|Vanillinzucker,300,g	Verzierungen:Haselnuesse,300,g|Kakaoguss,0,3|Mandeln,300,g|Marmelade,3,l|Walnuesse,300,g

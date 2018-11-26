@@ -67,7 +67,94 @@ Void Daten::readFromDataFile()
 
 Void Daten::readFromDataFile(String ^ Filename)
 {
-    Console::WriteLine("Fake Read data from File: " + Filename);
+    Console::WriteLine("Daten lesen aus Datei: " + Filename);
+    StreamReader^ fs = File::OpenText(Filename);
+    String^ line;
+    String^ modus = "Zutat";
+    Rezept^ daRezept = gcnew Rezept(
+        "Default", 100.0, "Default", "klein", 180.0, 40.0
+    );
+    while ((line = fs->ReadLine()) != nullptr)
+    {
+        //1: Zutaten -- 2:Rezept
+        if(modus->Equals("Zutat"))
+        {
+            if(line->Equals("--"))
+            {
+                modus = "Rezept";
+                continue;
+            }
+            array<String^>^ zut = line->Split(',');
+            setZutatByName(
+                gcnew Zutat(zut[0], Convert::ToDouble(zut[1]), zut[2])
+            );
+        } else {
+            Rezept^ daRezept = gcnew Rezept(
+                "Default", 100.0, "Default", "klein", 180.0, 40.0
+            );
+            array<String^>^ rez = line->Split('\t');
+            for(int i = 0; i < rez->Length; i += 1)
+            {
+                array<String^>^ field = rez[i]->Split(':');
+                if(field[0]->Equals("teigname"))
+                {
+                    daRezept->setTeigname(field[1]);
+                }
+                else if(field[0]->Equals("basisAnzahl"))
+                {
+                    daRezept->setBasisAnzahl(Convert::ToDouble(field[1]));
+                }
+                else if(field[0]->Equals("form"))
+                {
+                    daRezept->setForm(field[1]);
+                }
+                else if (field[0]->Equals("groesse"))
+                {
+                    daRezept->setGroesse(field[1]);
+                }
+                else if (field[0]->Equals("backTemperatur"))
+                {
+                    daRezept->setBackTemperatur(Convert::ToDouble(field[1]));
+                }
+                else if (field[0]->Equals("backZeit"))
+                {
+                    daRezept->setBackZeit(Convert::ToDouble(field[1]));
+                }
+                else 
+                {
+                    array<String^>^ zutaStrs = field[1]->Split('|');
+                    for (int k=0; k < zutaStrs->Length; k += 1)
+                    {
+                        array<String^>^ triple = zutaStrs[k]->Split(',');
+                        if (field[0] == "Zutaten")
+                        {
+                            daRezept->addZutat(
+                                gcnew Zutat(
+                                    triple[0],
+                                    Convert::ToDouble(triple[1]),
+                                    triple[2]
+                                )
+                            );
+                        }
+                        else if (field[0] == "Verzierungen")
+                        {
+                            daRezept->addVerzierung(
+                                gcnew Zutat(
+                                    triple[0],
+                                    Convert::ToDouble(triple[1]),
+                                    triple[2]
+                                )
+                            );
+                        }
+                    }
+                }
+                setRezeptByName(daRezept);
+            }
+        }
+    }
+    fs->Close();
+/**/
+    /*Console::WriteLine("Fake Read data from File: " + Filename);
     // Rezeptebeispiele
     Rezept^ aRez = gcnew Rezept("Schokokeks", 100.0, "Kreis", "mittel", 180.0, 40.0);
     aRez->addZutat(gcnew Zutat("Backpulver", 100.0, "g"));
@@ -121,7 +208,7 @@ Void Daten::readFromDataFile(String ^ Filename)
     aRez->addVerzierung(gcnew Zutat("Marmelade", 3.0, "l"));
     aRez->addVerzierung(gcnew Zutat("Walnuesse", 300.0, "g"));
     setRezeptByName(aRez);
-
+/**/
     return Void();
 }
 
