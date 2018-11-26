@@ -1,0 +1,1 @@
+teigname:Zitronensterne	basisAnzahl:10000	form:Stern	groesse:mittel	backTemperatur:200	backZeit:30	Zutaten:Backpulver,10000,g|Eier,110,l|Mehl,120000,g|Milch,500,l|Pflanzenfett,80000,g|Zucker,110000,g|Zitronenpulver,20000,g	Verzierungen:Zuckerstreusel(bunt),33300,g|Zitronenguss,33,33,l	

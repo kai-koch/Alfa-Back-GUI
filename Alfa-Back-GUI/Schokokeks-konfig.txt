@@ -1,1 +1,0 @@
-teigname:Schokokeks	basisAnzahl:10000	form:Kreis	groesse:mittel	backTemperatur:200	backZeit:30	Zutaten:Backpulver,10000,g|Eier,90,l|Kakao,70000,g|Mehl,90000,g|Milch,400,l|Pflanzenfett,50000,g|Zucker,100000,g	Verzierungen:Kakaoguss,30,l|Schokostreusel,30000,g	

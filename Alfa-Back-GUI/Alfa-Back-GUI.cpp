@@ -12,7 +12,7 @@ int main()
     cookies->readFromDataFile();
     // Für jede Sorte 10000 Stueck in Config datei.
     for each(KeyValuePair<String^,Rezept^> kvp in cookies->getAllRezepte()) {
-        cookies->writeKonfigDatei(kvp.Value->getKonfigdatei(10000), kvp.Key + "-konfig.txt");
+        cookies->writeKonfigDatei(kvp.Value->getKonfigdatei(10000), kvp.Key + "-10000-konfig.txt");
     }
     cookies->buildZutatenlisteFromRezepteListe();
     // Rezept und Zutatendaten in Daten-File schreiben
