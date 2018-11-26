@@ -159,7 +159,7 @@ Void Rezept::factorForProduktionBatch(Double rezeptfactor)
 
 String^ Rezept::getDataLine()
 {
-    array<String^>^ config = gcnew array<String^>(9);
+    array<String^>^ config = gcnew array<String^>(8);
     config[0] = "teigname:" + getTeigname();
     config[1] = "basisAnzahl:" + getBasisAnzahl();
     config[2] = "form:" + getForm();
