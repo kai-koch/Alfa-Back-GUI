@@ -155,7 +155,6 @@ System::Void AlfaBackGUI::MyFormPaint::button_Kreis_Click(System::Object ^ sende
 	pg->SmoothingMode = Drawing2D::SmoothingMode::AntiAlias;
 
 	pg->DrawEllipse(pen_black, 200, 150, 300, 300);
-	pg->FillEllipse(brush_red, 200, 150, 300, 300);
 
 	LinearGradientBrush ^linear = gcnew LinearGradientBrush(System::Drawing::Point(350, 100), System::Drawing::Point(350, 700), Color::Salmon, Color::Cyan);
 	pg->FillEllipse(linear, 200, 150, 300, 300);
