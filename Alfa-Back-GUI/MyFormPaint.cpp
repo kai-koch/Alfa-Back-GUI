@@ -94,15 +94,23 @@ System::Void AlfaBackGUI::MyFormPaint::button_Stern_Click(System::Object ^ sende
 	array<Point>^ pnts = { Orig, Orig, Orig, Orig, Orig, Orig, Orig, Orig, Orig, Orig };
 
 	pnts[0].Y -= 200; // top off the star, or on a clock this is 12:00 or 0:00 hours
-	pnts[1].X += innerradius * Sin36; pnts[1].Y -= innerradius * Cos36; // 0:06 hours
-	pnts[2].X += outerradius * Sin72; pnts[2].Y -= outerradius * Cos72; // 0:12 hours
-	pnts[3].X += innerradius * Sin72; pnts[3].Y += innerradius * Cos72; // 0:18
-	pnts[4].X += outerradius * Sin36; pnts[4].Y += outerradius * Cos36; // 0:24
-	pnts[5].Y += innerradius;
-	pnts[6].X += pnts[6].X - pnts[4].X; pnts[6].Y = pnts[4].Y; // mirror point
-	pnts[7].X += pnts[7].X - pnts[3].X; pnts[7].Y = pnts[3].Y; // mirror point
-	pnts[8].X += pnts[8].X - pnts[2].X; pnts[8].Y = pnts[2].Y; // mirror point
-	pnts[9].X += pnts[9].X - pnts[1].X; pnts[9].Y = pnts[1].Y; // mirror point
+	pnts[1].X += (int)(innerradius * Sin36);
+    pnts[1].Y -= (int)(innerradius * Cos36); // 0:06 hours
+	pnts[2].X += (int)(outerradius * Sin72);
+    pnts[2].Y -= (int)(outerradius * Cos72); // 0:12 hours
+	pnts[3].X += (int)(innerradius * Sin72);
+    pnts[3].Y += (int)(innerradius * Cos72); // 0:18
+	pnts[4].X += (int)(outerradius * Sin36);
+    pnts[4].Y += (int)(outerradius * Cos36); // 0:24
+	pnts[5].Y += (int)innerradius;
+	pnts[6].X += pnts[6].X - pnts[4].X;
+    pnts[6].Y = pnts[4].Y; // mirror point
+	pnts[7].X += pnts[7].X - pnts[3].X;
+    pnts[7].Y = pnts[3].Y; // mirror point
+	pnts[8].X += pnts[8].X - pnts[2].X;
+    pnts[8].Y = pnts[2].Y; // mirror point
+    pnts[9].X += pnts[9].X - pnts[1].X;
+    pnts[9].Y = pnts[1].Y; // mirror point
 
 	pg->SmoothingMode = Drawing2D::SmoothingMode::AntiAlias;
 
