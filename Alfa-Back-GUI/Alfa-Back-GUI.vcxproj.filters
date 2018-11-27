@@ -30,6 +30,9 @@
     <ClCompile Include="AlfaBackForm.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="MyFormPaint.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rezept.h">
@@ -47,15 +50,13 @@
     <ClInclude Include="AlfaBackForm.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="MyFormPaint.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Alfa-Back-GUI.rc">
       <Filter>Ressourcendateien</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="AlfaBackForm.resx">
-      <Filter>Ressourcendateien</Filter>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

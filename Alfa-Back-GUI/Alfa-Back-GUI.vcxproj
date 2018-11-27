@@ -127,6 +127,7 @@
     <ClCompile Include="Alfa-Back-GUI.cpp" />
     <ClCompile Include="AlfaBackForm.cpp" />
     <ClCompile Include="Daten.cpp" />
+    <ClCompile Include="MyFormPaint.cpp" />
     <ClCompile Include="Rezept.cpp" />
     <ClCompile Include="Zutat.cpp" />
   </ItemGroup>
@@ -142,12 +143,23 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Daten.h" />
+    <ClInclude Include="MyFormPaint.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="Rezept.h" />
     <ClInclude Include="Zutat.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Alfa-Back-GUI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AlfaBackForm.resx">
+      <DependentUpon>AlfaBackForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormPaint.resx">
+      <DependentUpon>MyFormPaint.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

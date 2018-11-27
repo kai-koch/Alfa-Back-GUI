@@ -34,6 +34,8 @@ namespace AlfaBackGUI {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^  Zweites_Fenster;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,12 +50,31 @@ namespace AlfaBackGUI {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"AlfaBackForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->Zweites_Fenster = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// Zweites_Fenster
+			// 
+			this->Zweites_Fenster->Location = System::Drawing::Point(273, 354);
+			this->Zweites_Fenster->Name = L"Zweites_Fenster";
+			this->Zweites_Fenster->Size = System::Drawing::Size(127, 23);
+			this->Zweites_Fenster->TabIndex = 0;
+			this->Zweites_Fenster->Text = L"Zweites Fenster";
+			this->Zweites_Fenster->UseVisualStyleBackColor = true;
+			this->Zweites_Fenster->Click += gcnew System::EventHandler(this, &AlfaBackForm::Zweites_Fenster_Click);
+			// 
+			// AlfaBackForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(421, 389);
+			this->Controls->Add(this->Zweites_Fenster);
+			this->Name = L"AlfaBackForm";
+			this->Text = L"AlfaBackForm";
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
+	private: System::Void Zweites_Fenster_Click(System::Object^  sender, System::EventArgs^  e);
 	};
 }
