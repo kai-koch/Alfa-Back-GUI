@@ -12,7 +12,7 @@ System::Void AlfaBackGUI::MyFormPaint::button_Quadrat_Click(System::Object ^ sen
 
 	Graphics ^pg = CreateGraphics();
 	SolidBrush ^ brush_red = gcnew SolidBrush(Color::Red);
-	Pen^ pen_black = gcnew Pen(Color::Black, 3.0f);
+	Pen^ pen_black = gcnew Pen(Color::Black, 3);
 
 
 
@@ -40,7 +40,7 @@ System::Void AlfaBackGUI::MyFormPaint::button_Oval_Click(System::Object ^ sender
 	this->Refresh();
 
 
-	Point points = Point(200.0F, 115.0F);
+	Point points = Point(200, 115);
 
 	Graphics ^pg = CreateGraphics();
 	SolidBrush ^ brush_red = gcnew SolidBrush(Color::Red);
@@ -74,7 +74,7 @@ System::Void AlfaBackGUI::MyFormPaint::button_Stern_Click(System::Object ^ sende
 	float outerradius = 200.0F;
 	float innerradius = 100.0F;
 
-	Point Orig = Point(350.0F, 300.0F);
+	Point Orig = Point(350, 300);
 	// Create pen.
 
 	Graphics ^pg = CreateGraphics();
@@ -93,7 +93,7 @@ System::Void AlfaBackGUI::MyFormPaint::button_Stern_Click(System::Object ^ sende
 
 	array<Point>^ pnts = { Orig, Orig, Orig, Orig, Orig, Orig, Orig, Orig, Orig, Orig };
 
-	pnts[0].Y -= 200.0F; // top off the star, or on a clock this is 12:00 or 0:00 hours
+	pnts[0].Y -= 200; // top off the star, or on a clock this is 12:00 or 0:00 hours
 	pnts[1].X += innerradius * Sin36; pnts[1].Y -= innerradius * Cos36; // 0:06 hours
 	pnts[2].X += outerradius * Sin72; pnts[2].Y -= outerradius * Cos72; // 0:12 hours
 	pnts[3].X += innerradius * Sin72; pnts[3].Y += innerradius * Cos72; // 0:18
@@ -136,11 +136,11 @@ System::Void AlfaBackGUI::MyFormPaint::button_Kreis_Click(System::Object ^ sende
 
 	this->Refresh();
 
-	Point points = Point(200.0F, 150.0F);
+	Point points = Point(200, 150);
 
 	Graphics ^pg = CreateGraphics();
 	SolidBrush ^ brush_red = gcnew SolidBrush(Color::Red);
-	Pen^ pen_black = gcnew Pen(Color::Black, 3.0f);
+	Pen^ pen_black = gcnew Pen(Color::Black, 3);
 
 	System::Drawing::Font ^ font1 = gcnew System::Drawing::Font("Verdana", 30);
 
@@ -169,12 +169,12 @@ System::Void AlfaBackGUI::MyFormPaint::button_Fuenfeck_Click(System::Object ^ se
 
 	this->Refresh();
 
-	Point points1 = Point(275.0F, 150.0F);
-	Point points2 = Point(425.0F, 150.0F);
-	Point points3 = Point(525.0F, 325.0F);
-	Point points4 = Point(350.0F, 500.0F);
-	Point points5 = Point(175.0F, 325.0F);
-	Point points6 = Point(275.0F, 150.0F);
+	Point points1 = Point(275, 150);
+	Point points2 = Point(425, 150);
+	Point points3 = Point(525, 325);
+	Point points4 = Point(350, 500);
+	Point points5 = Point(175, 325);
+	Point points6 = Point(275, 150);
 
 	// Create pen.
 	Graphics ^pg = CreateGraphics();
@@ -213,12 +213,12 @@ System::Void AlfaBackGUI::MyFormPaint::button_Dreieck_Click(System::Object ^ sen
 
 	this->Refresh();
 
-	Point points1 = Point(100.0F, 375.0F);
-	Point points2 = Point(350.0F, 125.0F);
-	Point points3 = Point(350.0F, 125.0F);
-	Point points4 = Point(600.0F, 375.0F);
-	Point points5 = Point(600.0F, 375.0F);
-	Point points6 = Point(100.0F, 375.0F);
+	Point points1 = Point(100, 375);
+	Point points2 = Point(350, 125);
+	Point points3 = Point(350, 125);
+	Point points4 = Point(600, 375);
+	Point points5 = Point(600, 375);
+	Point points6 = Point(100, 375);
 
 	Graphics ^pg = CreateGraphics();
 	SolidBrush ^ brush_red = gcnew SolidBrush(Color::Red);
@@ -226,7 +226,7 @@ System::Void AlfaBackGUI::MyFormPaint::button_Dreieck_Click(System::Object ^ sen
 
 	pg->SmoothingMode = Drawing2D::SmoothingMode::AntiAlias;
 	// Create array of points that define lines to draw.
-	array<PointF>^ points = { PointF(100.0F,375.0F),PointF(350.0F,125.0F), PointF(350.0F,125.0F),PointF(600.0F,375.0F),PointF(600.0F,375.0F),PointF(100.0F,375.0F) };
+	array<PointF>^ points = { PointF(100,375),PointF(350,125), PointF(350,125),PointF(600,375),PointF(600,375),PointF(100,375) };
 
 	//Draw lines to screen.
 	pg->DrawLines(pen_black, points);
