@@ -145,6 +145,7 @@ namespace AlfaBackGUI {
 			this->Controls->Add(this->button_Quadrat);
 			this->Name = L"MyFormPaint";
 			this->Text = L"MyFormPaint";
+			this->Load += gcnew System::EventHandler(this, &MyFormPaint::MyFormPaint_Load);
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyFormPaint::MyFormPaint_Paint);
 			this->Resize += gcnew System::EventHandler(this, &MyFormPaint::MyFormPaint_Resize);
 			this->ResumeLayout(false);
@@ -159,5 +160,7 @@ private: System::Void button_Fuenfeck_Click(System::Object^  sender, System::Eve
 private: System::Void button_Dreieck_Click(System::Object^  sender, System::EventArgs^  e);
 private: System::Void MyFormPaint_Resize(System::Object^  sender, System::EventArgs^  e);
 private: System::Void MyFormPaint_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e);
+private: System::Void MyFormPaint_Load(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }
