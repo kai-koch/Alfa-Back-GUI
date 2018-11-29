@@ -7,3 +7,12 @@ System::Void AlfaBackGUI::AlfaBackForm::Zweites_Fenster_Click(System::Object ^ s
 	//zf->Show();
 	MFP->ShowDialog();
 }
+
+System::Void AlfaBackGUI::AlfaBackForm::AlfaBackForm_Load(System::Object ^ sender, System::EventArgs ^ e)
+{
+    
+        //add items to combo
+    
+
+    return System::Void();
+}

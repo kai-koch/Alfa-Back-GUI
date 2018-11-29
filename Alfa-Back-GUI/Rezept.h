@@ -141,6 +141,11 @@ public:
     Dictionary<String^, Zutat^>^ getVerzierungsListe();
 
     /**
+     * gibt String-Namen fuer Combobox zurueck
+     */
+    String^ ToString() override;
+
+    /**
      * @destructor
      */
     ~Rezept();

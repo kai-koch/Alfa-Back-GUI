@@ -181,4 +181,8 @@ Dictionary<String^, Zutat^>^ Rezept::getVerzierungsListe()
     return gcnew Dictionary<String^, Zutat^>(verzierungen);
 }
 
+String^ Rezept::ToString() {
+    return teigname;
+}
+
 Rezept::~Rezept() {}
